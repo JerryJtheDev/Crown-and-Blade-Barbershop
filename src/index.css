@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 420px;
+}
+
+@layer base {
+  :root {
+    --font-serif: 'Fraunces', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --color-paper-bg: #F6F2EA;
+    --color-paper-card: #FFFDF9;
+    --color-paper-muted: #ECE5D8;
+    --color-paper-border: #DED5C6;
+    --color-paper-dark-border: #C8BCAC;
+    --color-terracotta: #B94A2C;
+    --color-terracotta-dark: #9A381F;
+    --color-terracotta-wash: #FAF0EC;
+    --color-ink-primary: #201D1A;
+    --color-ink-secondary: #655D52;
+    --color-ink-muted: #8E8475;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper-bg);
+    color: var(--color-ink-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif-display {
+    font-family: var(--font-serif);
+    font-feature-settings: "liga", "kern";
+  }
+}
+
+/* Tactile paper card & ticket details */
+.paper-ticket-border {
+  border: 1.5px solid #D8CEBE;
+  background-color: #FFFDF9;
+  box-shadow: 0 1px 3px rgba(32, 29, 26, 0.04), 0 4px 12px rgba(32, 29, 26, 0.03);
+}
+
+.paper-card {
+  border: 1px solid #DED5C6;
+  background-color: #FFFDF9;
+  box-shadow: 0 1px 2px rgba(32, 29, 26, 0.03);
+}
+
+/* Rubber stamp effect for reference badges and confirmations */
+.stamp-seal {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  border: 1.5px dashed #B94A2C;
+  color: #B94A2C;
+  padding: 2px 8px;
+  transform: rotate(-1.5deg);
+  letter-spacing: 0.08em;
+  background: rgba(185, 74, 44, 0.04);
+}
+
+.stamp-seal-dark {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  border: 1.5px dashed #4A443C;
+  color: #4A443C;
+  padding: 2px 8px;
+  transform: rotate(-0.5deg);
+  letter-spacing: 0.08em;
+}
+
+/* Subtle hand-drawn / tactile ticket cut-line */
+.perforated-cut {
+  background-image: linear-gradient(to right, #D5CAB8 60%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 8px 1.5px;
+  background-repeat: repeat-x;
+}
+
+/* Custom warm scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EFE9DC;
+}
+::-webkit-scrollbar-thumb {
+  background: #D0C4B2;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5A793;
+}
+
+/* Subtle diagonal hatching for reserved / booked appointment slots */
+.slot-hatch-pattern {
+  background-color: #F8F5EE;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 6px,
+    rgba(200, 188, 172, 0.28) 6px,
+    rgba(200, 188, 172, 0.28) 8px
+  );
+}
+
+/* Slanted rubber stamps for booking status */
+.stamp-completed {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2C4E37;
+  border: 1.5px solid #2C4E37;
+  padding: 1px 5px;
+  border-radius: 2px;
+  background: rgba(44, 78, 55, 0.08);
+  transform: rotate(-3deg);
+}
+
+.stamp-cancelled {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8E8475;
+  border: 1.5px dashed #8E8475;
+  padding: 1px 5px;
+  border-radius: 2px;
+  background: rgba(142, 132, 117, 0.08);
+  transform: rotate(3deg);
+}
+
+.stamp-in-chair {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9A6417;
+  border: 1.5px solid #9A6417;
+  padding: 1px 5px;
+  border-radius: 2px;
+  background: rgba(154, 100, 23, 0.08);
+  transform: rotate(-1.5deg);
+}
+

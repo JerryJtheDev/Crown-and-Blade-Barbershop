@@ -1,0 +1,6 @@
+{
+  "name": "Crown & Blade Barbershop · Lekki",
+  "description": "Appointment booking docket and daily master agenda for Crown & Blade Barbershop, Admiralty Way, Lekki Phase 1, Lagos. Precision cuts, beard sculpting, hot towel treatments, and Nigerian barbershop rituals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
